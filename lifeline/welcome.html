@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to Lifeline Hospital</title>
+  <style>
+    body {
+      background-color: #0b35f0;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .welcome-message {
+      text-align: center;
+      font-size: 48px;
+      font-weight: bold;
+      color: #010908;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="welcome-message">
+    ✅ WELCOME TO LIFELINE HOSPITAL
+  </div>
+
+  <!-- Background music -->
+  <audio id="welcomeSound" autoplay>
+    <source src="welcome.mp3" type="audio/mpeg">
+    Your browser does not support the audio tag.
+  </audio>
+
+  <script>
+    // Delay redirect after welcome text and sound
+    setTimeout(function () {
+      window.location.href = "home.php"; // Replace with your real homepage
+    }, 3800); // 4 seconds delay
+  </script>
+</body>
+</html>
